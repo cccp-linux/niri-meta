@@ -25,6 +25,6 @@ Recommends:
  procps,
  udisks2,
  wireplumber,
- wlsunset
+ wlsunset,
  wpasupplicant,
 Description: Shell meta-package

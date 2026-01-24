@@ -1,0 +1,25 @@
+Source: shell-meta
+Section: metapackages
+Priority: optional
+Maintainer: Dimitry Ishenko <dimitry.ishenko@gmail.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Vcs-Browser: https://github.com/cccp-linux/niri-meta
+Vcs-Git: https://github.com/cccp-linux/niri-meta.git
+
+Package: shell-meta
+Architecture: any
+Depends:
+ ${misc:Depends},
+ niri,
+ quickshell,
+Recommends:
+ brightnessctl,
+ playerctl,
+ udisks2,
+ wireplumber,
+# wlsunset-toggle
+ curl, jq, procps, wlsunset
+Description: Shell meta-package

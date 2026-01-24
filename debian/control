@@ -18,11 +18,11 @@ Depends:
 Recommends:
  bluez,
  brightnessctl,
- curl,      # wlsunset-toggle
- jq,        # wlsunset-toggle
+ curl,
+ jq,
  network-manager,
  playerctl,
- procps,    # wlsunset-toggle
+ procps,
  udisks2,
  wireplumber,
  wlsunset

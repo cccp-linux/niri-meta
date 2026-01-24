@@ -17,9 +17,11 @@ Depends:
  quickshell,
 Recommends:
  brightnessctl,
+ curl,      # wlsunset-toggle
+ jq,        # wlsunset-toggle
  playerctl,
+ procps,    # wlsunset-toggle
  udisks2,
  wireplumber,
-# wlsunset-toggle
- curl, jq, procps, wlsunset
+ wlsunset
 Description: Shell meta-package

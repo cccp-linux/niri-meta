@@ -1,5 +1,7 @@
-shell-meta (0.1) UNRELEASED; urgency=medium
+shell-meta (0.1) unstable; urgency=medium
 
-  * Initial release.
+  * Update README
+  * Initial import
+  * Initial commit
 
- -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 19 Dec 2025 17:39:43 -0500
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 23 Jan 2026 19:54:06 -0500

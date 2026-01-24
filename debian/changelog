@@ -1,3 +1,9 @@
+shell-meta (0.3) unstable; urgency=medium
+
+  * d/control: comments are not allowed
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 23 Jan 2026 21:11:09 -0500
+
 shell-meta (0.2) unstable; urgency=medium
 
   * d/control: recommend bluez, nm & wpasupplicant

@@ -16,12 +16,15 @@ Depends:
  niri,
  quickshell,
 Recommends:
+ bluez,
  brightnessctl,
  curl,      # wlsunset-toggle
  jq,        # wlsunset-toggle
+ network-manager,
  playerctl,
  procps,    # wlsunset-toggle
  udisks2,
  wireplumber,
  wlsunset
+ wpasupplicant,
 Description: Shell meta-package

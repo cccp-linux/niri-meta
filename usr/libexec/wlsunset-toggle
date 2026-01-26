@@ -1,10 +1,10 @@
 #!/bin/bash
 
-if pgrep wlsunset; then
-    pkill wlsunset
+if pid=$(pgrep -x wlsunset); then
+    kill $pid
 else
     data=$(curl -s -m3 http://ip-api.com/json/)
-    cache=~/.cache/wlsunset-toggle
+    cache=~/.cache/wlsunset-toggle.json
     [[ "$data" ]] && echo $data > $cache
 
     wlsunset $(cat $cache | jq -r '"-L \(.lon) -l \(.lat)"')

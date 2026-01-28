@@ -1,4 +1,4 @@
-Source: shell-meta
+Source: niri-meta
 Section: metapackages
 Priority: optional
 Maintainer: Dimitry Ishenko <dimitry.ishenko@gmail.com>
@@ -6,10 +6,10 @@ Rules-Requires-Root: no
 Build-Depends:
  debhelper-compat (= 13),
 Standards-Version: 4.6.2
-Vcs-Browser: https://github.com/cccp-linux/shell-meta
-Vcs-Git: https://github.com/cccp-linux/shell-meta.git
+Vcs-Browser: https://github.com/cccp-linux/niri-meta
+Vcs-Git: https://github.com/cccp-linux/niri-meta.git
 
-Package: shell-meta
+Package: niri-meta
 Architecture: any
 Depends:
  ${misc:Depends},

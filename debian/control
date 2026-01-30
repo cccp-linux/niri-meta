@@ -32,4 +32,5 @@ Recommends:
  wlsunset,
  wpasupplicant,
  xdg-utils,
+ xwayland-satellite,
 Description: Shell meta-package

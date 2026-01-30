@@ -1,3 +1,10 @@
+niri-meta (0.6) unstable; urgency=medium
+
+  * d/control: recommend xwayland-satellite
+  * README.md: update
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 29 Jan 2026 21:37:18 -0500
+
 niri-meta (0.5) unstable; urgency=medium
 
   * d/control: depend on ...

@@ -1,3 +1,9 @@
+niri-meta (0.7) unstable; urgency=medium
+
+  * wlsunset-toggle: ignore other users
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 30 Jan 2026 20:51:56 -0500
+
 niri-meta (0.6) unstable; urgency=medium
 
   * d/control: recommend xwayland-satellite

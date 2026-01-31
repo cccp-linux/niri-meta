@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if pid=$(pgrep -x wlsunset); then
+if pid=$(pgrep -u $(id -u) -x wlsunset); then
     kill $pid
 else
     data=$(curl -s -m3 http://ip-api.com/json/)

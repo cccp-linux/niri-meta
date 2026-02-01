@@ -1,3 +1,9 @@
+niri-meta (0.9) unstable; urgency=medium
+
+  * d/control: fix font name
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Sun, 01 Feb 2026 17:01:54 -0500
+
 niri-meta (0.8) unstable; urgency=medium
 
   * d/control: add several fonts

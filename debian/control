@@ -28,7 +28,7 @@ Recommends:
  jq,
  mpv,
  network-manager,
- pipewire-audio
+ pipewire-audio,
  playerctl,
  procps,
  tuned-utils,

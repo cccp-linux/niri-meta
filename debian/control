@@ -23,7 +23,7 @@ Recommends:
  ffmpeg,
  fonts-courier-nerd,
  fonts-roboto,
- fonts-roboto-mono,
+ fonts-roboto-mono-nerd | fonts-roboto-mono,
  fonts-roboto-slab,
  jq,
  mpv,

@@ -1,3 +1,9 @@
+niri-meta (0.14) unstable; urgency=medium
+
+  * d/control: simplify recommends
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 04 Feb 2026 11:53:21 -0500
+
 niri-meta (0.13) unstable; urgency=medium
 
   * d/control: replace tuned with power-profiles-daemon

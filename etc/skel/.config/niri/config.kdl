@@ -9,18 +9,13 @@ input {
         numlock
     }
 
-    touchpad {
-        tap
-        dwt
-    }
+    touchpad { tap; dwt; }
 }
 
-/-output "eDP-1" {
-    scale 2
-}
+/-output "eDP-1" { scale 2; }
 
 layout {
-    gaps 6
+    gaps 4
 
     center-focused-column "never"
 
@@ -32,9 +27,7 @@ layout {
 
     default-column-width { proportion 0.66667; }
 
-    focus-ring {
-        off
-    }
+    focus-ring { off; }
 
     border {
         width 2
@@ -44,9 +37,7 @@ layout {
     }
 }
 
-hotkey-overlay {
-    skip-at-startup
-}
+hotkey-overlay { skip-at-startup; }
 
 prefer-no-csd
 
@@ -56,6 +47,8 @@ window-rule {
     geometry-corner-radius 6
     clip-to-geometry true
 }
+
+gestures { hot-corners { off; }; }
 
 binds {
     // focus window/column

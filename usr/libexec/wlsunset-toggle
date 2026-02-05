@@ -7,5 +7,5 @@ else
     cache=~/.cache/wlsunset-toggle.json
     [[ "$data" ]] && echo $data > $cache
 
-    wlsunset $(cat $cache | jq -r '"-L \(.lon) -l \(.lat)"')
+    exec wlsunset $(cat $cache | jq -r '"-L \(.lon) -l \(.lat)"')
 fi

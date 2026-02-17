@@ -1,3 +1,9 @@
+niri-meta (0.16) unstable; urgency=medium
+
+  * d/control: recommend cliphist
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 17 Feb 2026 17:45:38 -0500
+
 niri-meta (0.15) unstable; urgency=medium
 
   * wlsunset-toggle: use exec

@@ -19,6 +19,7 @@ Recommends:
  bluez,
  brightness-udev,
  brightnessctl,
+ cliphist,
  curl,
  ffmpeg,
  fonts-courier-nerd,

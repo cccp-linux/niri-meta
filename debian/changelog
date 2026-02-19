@@ -1,3 +1,9 @@
+niri-meta (0.17) unstable; urgency=medium
+
+  * d/control: recommend qml modules for qs
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 18 Feb 2026 20:37:35 -0500
+
 niri-meta (0.16) unstable; urgency=medium
 
   * d/control: recommend cliphist

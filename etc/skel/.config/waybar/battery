@@ -1,0 +1,40 @@
+#!/bin/bash
+set -e
+
+cap=
+icon=(    )
+path=/sys/class/power_supply/${1:-BAT0}
+stat=
+
+get_info()
+{
+    local new_cap=$(cat $path/capacity) new_stat=$(cat $path/status)
+
+    if [[ "$new_cap" != "$cap" || "$new_stat" != "$stat" ]]; then
+        cap="$new_cap" stat="$new_stat"
+
+        [[ "$stat" ]] || return
+
+        local id=$((cap * (${#icon[@]} - 1) / 100))
+        local ic="${icon[$id]}"
+
+        local class
+        case "$stat" in
+            Charging) class="charging" ic="󱐋$ic";;
+            Full) class="full" ic=" $ic";;
+            *) class="discharging";;
+        esac
+
+        local state
+          if (( cap <= 15 )); then state="critical"
+        elif (( cap <= 25 )); then state="low"
+        elif (( cap <= 35 )); then state="warning"
+        else state="normal"
+        fi
+
+        printf '{"class": ["%s", "%s"], "percentage": %d, "text": "%s"}\n' "$state" "$class" "$cap" "$ic"
+    fi
+}
+
+get_info
+while :; do sleep 10; get_info; done

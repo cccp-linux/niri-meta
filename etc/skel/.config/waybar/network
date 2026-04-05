@@ -1,0 +1,60 @@
+#!/bin/bash
+
+dev=${1:-wlan0}
+offline=(󰤫 󰤠 󰤣 󰤦 󰤩)
+ online=(󰤯 󰤟 󰤢 󰤥 󰤨)
+
+get_info()
+{
+    local signal=0 ssid state tooltip type
+
+    while IFS=": " read -r key val; do
+        case "$key" in
+            GENERAL.CONNECTION) ssid=$val;;
+            GENERAL.STATE) state=${val%% *};;
+            GENERAL.TYPE)  type=$val;;
+            IP4.ADDRESS*)  tooltip+="\nAddress: $val";;
+            IP4.DNS*)      tooltip+="\nDNS: $val";;
+            IP4.GATEWAY)   tooltip+="\nGateway: $val";;
+        esac
+    done < <(nmcli device show "$dev" 2>/dev/null)
+
+    case "$state" in
+        30|110)
+            [[ "$type" == "wifi" ]] && ssid="󰤮 " || ssid="󱘖 "
+            state="disconnected"
+            tooltip="$dev: Disconnected"
+        ;;
+
+        [4-9][0-9])
+            [[ "$type" == "wifi" ]] && ssid="${online[0]}  $ssid" || ssid="󰈀 "
+            state="connecting"
+            tooltip="$dev: Connecting..."
+        ;;
+
+        100)
+            local conn=$(nmcli networking connectivity)
+            state="connected"
+            tooltip="$dev: Connected\n$tooltip"
+
+            if [[ "$type" == "wifi" ]]; then
+                signal=$(nmcli -t -f active,signal dev wifi list ifname "$dev" | grep ^yes: | cut -d: -f2)
+
+                local -n icon
+                [[ "$conn" == "full" ]] && icon=online || icon=offline
+
+                local id=$((signal * (${#icon[@]} - 1) / 100))
+                ssid="${icon[$id]}  $ssid"
+            else
+                [[ "$conn" == "full" ]] && ssid="󰈀 " || ssid="󰈀󰈅"
+            fi
+        ;;
+
+        *) ssid="" state="";;
+    esac
+
+    printf '{"class": "%s", "percentage": %d, "text": "%s", "tooltip": "%s"}\n' "$state" "$signal" "$ssid" "$tooltip"
+}
+
+get_info
+nmcli monitor | while read -r _; do get_info; done

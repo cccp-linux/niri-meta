@@ -1,0 +1,164 @@
+// -*- mode: jsonc -*-
+{
+    "height": 34,
+    "layer": "top",
+    "spacing": 16,
+
+    "modules-left": [
+        "niri/workspaces",
+        "cpu",
+        "temperature",
+        "memory",
+    ],
+    "modules-center": [
+        "clock",
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "power-profiles-daemon",
+        "niri/language",
+        "bluetooth",
+        "custom/network#wlan0",
+        "custom/network#eth0",
+        "backlight",
+        "wireplumber",
+        "custom/usb",
+        "custom/battery",
+        "custom/menu"
+    ],
+
+    ////////////////////
+    "backlight": {
+        "format": " {}%",
+        "justify": "left",
+        "min-length": 6,
+        "on-update": "",
+        "tooltip": false,
+    },
+
+    "bluetooth": {
+        "format": " ",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage:2}%",
+        "on-click": "x-terminal-emulator --class vert:bluetoothctl -e bluetoothctl",
+        "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
+    },
+
+    "clock": {
+        "actions": {
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down",
+        },
+        "calendar": {
+            "format": {
+                "months":   "<span color='#e5e9f0'><b>{}</b></span>",
+                "weekdays": "<span color='#5e81ac'><b>{}</b></span>",
+                "today":    "<span color='#bf616a'><b>{}</b></span>",
+            },
+            "on-scroll": 1,
+        },
+        "format": "{:%a %b %d, %H:%M}",
+        "interval": 10,
+        "tooltip-format": "<span font-family='Roboto Mono'>{calendar}</span>",
+    },
+
+    "cpu": {
+        "format": "󰓅 {usage}%",
+        "interval": 3,
+        "justify": "left",
+        "min-length": 5,
+        "on-click": "x-terminal-emulator --class large:htop -e htop",
+        "states": {
+            "high": 90,
+            "max": 100,
+        },
+        "tooltip": false,
+    },
+
+    "custom/battery": {
+        "exec": "~/.config/waybar/battery BAT0",
+        "format": "{} {percentage}%",
+        "return-type": "json",
+    },
+
+    "custom/usb": {
+        "format": "󱊟 ",
+        "on-click": "x-terminal-emulator --class large:usbmgr -e usbmgr",
+        "tooltip": false,
+    },
+
+    "custom/menu": {
+        "format": " ",
+        "tooltip": false,
+    },
+
+    "custom/network#eth0": {
+        "exec": "~/.config/waybar/network eth0",
+        "on-click": "x-terminal-emulator --class vert:lanmgr -e lanmgr eth0",
+        "return-type": "json",
+    },
+
+    "custom/network#wlan0": {
+        "exec": "~/.config/waybar/network wlan0",
+        "on-click": "x-terminal-emulator --class vert:wlanmgr -e wlanmgr wlan0",
+        "return-type": "json",
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰎁 ",
+            "deactivated": "󱛺 "
+        }
+    },
+
+    "memory": {
+        "format": " {used:2.1f}G",
+        "interval": 5,
+        "justify": "left",
+        "min-length": 6,
+        "on-click": "x-terminal-emulator --class large:btop -e btop",
+        "states": {
+            "high": 90,
+            "max": 100,
+        },
+        "tooltip": false,
+    },
+
+    "niri/language": {
+        "format": "  {}",
+    },
+
+    "power-profiles-daemon": {
+        "format-icons": {
+            "performance": " ",
+            "balanced": "󰗑 ",
+            "power-saver": "󰌪 "
+        }
+    },
+
+    "temperature": {
+        "critical-threshold": 100,
+        "format": "󱃃 {temperatureC}°C",
+        "format-critical": "󰸁 {temperatureC}°C",
+        "format-warning": "󰔏 {temperatureC}°C",
+        "interval": 5,
+        "justify": "left",
+        "min-length": 6,
+        "thermal-zone": 8,
+        "tooltip": false,
+        "warning-threshold": 90,
+    },
+
+    "wireplumber": {
+        "format": " {volume}%",
+        "format-muted": "{volume}%",
+        "justify": "left",
+        "min-length": 6,
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-update": "",
+        "tooltip": false,
+    },
+}

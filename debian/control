@@ -28,6 +28,7 @@ Recommends:
  jq,
  mpv,
  network-manager,
+ network-manager-tui | network-manager,
  pipewire-audio,
  playerctl,
  power-profiles-daemon,

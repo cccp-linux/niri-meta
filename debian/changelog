@@ -1,3 +1,15 @@
+niri-meta (0.18) unstable; urgency=medium
+
+  * Add lanmgr, usbmgr and wlanmgr
+  * Add default waybar config
+  * d/control: recommend term-meta
+  * config.kdl: update
+  * d/control: nmtui is a separate package on sid
+  * d/control: not using cliphist
+  * d/control: use waybar instead of quickshell
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Sat, 04 Apr 2026 23:24:32 -0400
+
 niri-meta (0.17) unstable; urgency=medium
 
   * d/control: recommend qml modules for qs

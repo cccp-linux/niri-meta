@@ -33,6 +33,7 @@ Recommends:
  playerctl,
  power-profiles-daemon,
  procps,
+ term-meta,
  udisks2,
  wireplumber,
  wlsunset,

@@ -68,7 +68,7 @@
         "interval": 3,
         "justify": "left",
         "min-length": 5,
-        "on-click": "x-terminal-emulator --class large:htop -e htop",
+        "on-click": "x-terminal-emulator --class float:htop -e htop",
         "states": {
             "high": 90,
             "max": 100,
@@ -115,7 +115,7 @@
         "interval": 5,
         "justify": "left",
         "min-length": 6,
-        "on-click": "x-terminal-emulator --class large:btop -e btop",
+        "on-click": "x-terminal-emulator --class float:btop -e btop",
         "states": {
             "high": 90,
             "max": 100,

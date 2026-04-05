@@ -48,27 +48,15 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^large:"
+    match app-id="^float:"
     open-floating true
     default-column-width { proportion 0.75; }
     default-window-height { proportion 0.75; }
 }
 
-window-rule {
-    match app-id="^med:"
-    open-floating true
-    default-column-width { proportion 0.50; }
-    default-window-height { proportion 0.50; }
-}
-
-window-rule {
-    match app-id="^vert:"
-    open-floating true
-    default-column-width { proportion 0.40; }
-    default-window-height { proportion 0.80; }
-}
-
 gestures { hot-corners { off; }; }
+
+spawn-at-startup "waybar"
 
 binds {
     // focus window/column
@@ -192,7 +180,7 @@ binds {
     Mod+Shift+Q     { spawn "niri" "msg" "action" "quit" "--skip-confirmation"; }
 
     Mod+T           { spawn "x-terminal-emulator"; }
-    Mod+Shift+T     { spawn "x-terminal-emulator" "--class" "large:term"; }
+    Mod+Shift+T     { spawn "x-terminal-emulator" "--class" "float:term"; }
 
     Mod+Shift+Y     { spawn "/usr/libexec/wlsunset-toggle"; }
 

@@ -8,11 +8,11 @@ input {
         }
         numlock
     }
-
     touchpad { tap; dwt; }
 }
 
-/-output "eDP-1" { scale 2; }
+/-output "DP-3" { scale 2; position x=0 y=-1080; }
+/-output "eDP-1"{ scale 2; position x=0 y=0; }
 
 layout {
     gaps 4
@@ -27,14 +27,13 @@ layout {
 
     default-column-width { proportion 0.66667; }
 
-    focus-ring { off; }
-
     border {
         width 2
         active-gradient from="#80c8ff80" to="#c7ff7f80" angle=45
         inactive-color "#50505080"
         urgent-color "#cb000080"
     }
+    focus-ring { off; }
 }
 
 hotkey-overlay { skip-at-startup; }
@@ -46,6 +45,27 @@ screenshot-path "~/image/screenshot_%Y-%m-%d_%H-%M-%S.png"
 window-rule {
     geometry-corner-radius 6
     clip-to-geometry true
+}
+
+window-rule {
+    match app-id="^large:"
+    open-floating true
+    default-column-width { proportion 0.75; }
+    default-window-height { proportion 0.75; }
+}
+
+window-rule {
+    match app-id="^med:"
+    open-floating true
+    default-column-width { proportion 0.50; }
+    default-window-height { proportion 0.50; }
+}
+
+window-rule {
+    match app-id="^vert:"
+    open-floating true
+    default-column-width { proportion 0.40; }
+    default-window-height { proportion 0.80; }
 }
 
 gestures { hot-corners { off; }; }
@@ -140,8 +160,8 @@ binds {
     Mod+Comma       { consume-window-into-column; }
     Mod+Period      { expel-window-from-column; }
 
-    Mod+Minus       { set-column-width "-10%"; }
-    Mod+Equal       { set-column-width "+10%"; }
+    Mod+Minus       { set-column-width  "-10%"; }
+    Mod+Equal       { set-column-width  "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
@@ -162,18 +182,18 @@ binds {
     Mod+W           { toggle-column-tabbed-display; }
 
     // miscellaneous
-    Mod+Shift+Slash { show-hotkey-overlay; }
-
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+D           { spawn "fuzzel"; }
+    Mod+B           { spawn "x-www-browser"; }
 
     Mod+O           { toggle-overview; }
     Mod+Shift+P     { power-off-monitors; }
     Mod+Q           { close-window; }
-    Mod+Shift+Q     { quit; }
+    Mod+Shift+Q     { spawn "niri" "msg" "action" "quit" "--skip-confirmation"; }
 
-    Mod+T           { spawn "alacritty"; }
+    Mod+T           { spawn "x-terminal-emulator"; }
+    Mod+Shift+T     { spawn "x-terminal-emulator" "--class" "large:term"; }
+
     Mod+Shift+Y     { spawn "/usr/libexec/wlsunset-toggle"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }

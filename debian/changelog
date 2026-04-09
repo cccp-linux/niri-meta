@@ -1,3 +1,13 @@
+niri-meta (0.21) unstable; urgency=medium
+
+  * Enable gtk3 for Qt5/6 apps
+  * Install gtk3 and Yaru theme
+  * d/control: explicit pipewire
+  * niri/config.kdl: float Open dialog
+  * waybar/style.css: thinner font
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 09 Apr 2026 13:57:07 -0400
+
 niri-meta (0.20) unstable; urgency=medium
 
   * config.kdl: clean-up

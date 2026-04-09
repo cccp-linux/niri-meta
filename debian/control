@@ -29,6 +29,7 @@ Recommends:
  mpv,
  network-manager,
  network-manager-tui,
+ pipewire,
  pipewire-audio,
  playerctl,
  power-profiles-daemon,

@@ -26,6 +26,7 @@ Recommends:
  fonts-roboto-mono-nerd,
  fonts-roboto-slab,
  jq,
+ libgtk-3-0,
  mpv,
  network-manager,
  network-manager-tui,
@@ -41,4 +42,6 @@ Recommends:
  wpasupplicant,
  xdg-utils,
  xwayland-satellite,
+ yaru-theme-gtk,
+ yaru-theme-icon,
 Description: Shell meta-package

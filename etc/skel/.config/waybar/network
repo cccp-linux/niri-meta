@@ -57,4 +57,10 @@ get_info()
 }
 
 get_info
-nmcli monitor | while read -r _; do get_info; done
+nmcli monitor | (
+    while :; do
+        read -rt 10 _ && get_info
+        kill -0 $PPID 2>/dev/null || break
+    done
+    kill 0
+)

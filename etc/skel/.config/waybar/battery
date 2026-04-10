@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 cap=
 icon=(    )
@@ -37,4 +36,7 @@ get_info()
 }
 
 get_info
-while :; do sleep 10; get_info; done
+while :; do
+    sleep 10
+    kill -0 $PPID 2>/dev/null && get_info || break
+done

@@ -196,7 +196,7 @@ binds {
     Mod+O           { toggle-overview; }
     Mod+Shift+P     { power-off-monitors; }
     Mod+Q           { close-window; }
-    Mod+Shift+Q     { spawn "niri" "msg" "action" "quit" "--skip-confirmation"; }
+    Mod+Shift+Q     { quit skip-confirmation=true; }
 
     Mod+T           { spawn "x-terminal-emulator"; }
     Mod+Shift+T     { spawn "x-terminal-emulator" "--class" "xpane:term"; }

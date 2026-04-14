@@ -39,6 +39,7 @@ Recommends:
  qt6-gtk-platformtheme,
  qt6-wayland,
  qtwayland5,
+ swaybg,
  term-meta,
  udisks2,
  wireplumber,

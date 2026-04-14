@@ -80,6 +80,7 @@ window-rule {
 
 gestures { hot-corners { off; }; }
 
+// spawn-at-startup "swaybg" "-m" "fill" "-i" "<path>"
 spawn-at-startup "waybar"
 
 binds {

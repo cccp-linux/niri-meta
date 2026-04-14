@@ -73,6 +73,11 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    match app-id="com.freerdp.client.sdl3"
+    open-floating false
+}
+
 gestures { hot-corners { off; }; }
 
 spawn-at-startup "waybar"

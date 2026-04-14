@@ -1,3 +1,24 @@
+niri-meta (0.22) unstable; urgency=medium
+
+  * waybar/style.css: bigger font
+  * 40-niri.sh: redirect to file
+  * Add appmgr script
+  * Use *mgr scripts
+  * waybar/network: tweak
+  * d/control: recommend swaybg
+  * niri: add rule for freerdp
+  * niri: tweak panel sizes
+  * wlsunset-toggle: tweak
+  * gtk-3.0: use blue theme
+  * gtk-3.0: don't use light font
+  * 40-niri.sh: leave one session for term
+  * niri/config.kdl: simplify
+  * Better class names
+  * waybar/network: exit properly
+  * waybar/battery: exit properly
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 14 Apr 2026 15:46:25 -0400
+
 niri-meta (0.21) unstable; urgency=medium
 
   * Enable gtk3 for Qt5/6 apps

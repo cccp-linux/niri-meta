@@ -1,0 +1,34 @@
+#!/bin/bash
+
+readonly -a app=(
+    ":202:Firefox Web Browser:firefox"
+    ":244:LibreOffice:libreoffice"
+    ": 71:LibreOffice Calc:libreoffice --calc"
+    ":172:LibreOffice Draw:libreoffice --draw"
+    ": 25:LibreOffice Writer:libreoffice --writer"
+    ":  8:Terminal Emulator:x-terminal-emulator"
+)
+readonly norm=$(tput sgr0)
+
+scan_app()
+{
+    local args c icon name row
+
+    for row in "${app[@]}"; do
+        IFS=: read -r icon c name args <<< "$row"
+        c=$(tput setaf $c)
+        printf "${c}%1s  ${norm}%-22s\t%s\n" "$icon" "$name" "$args"
+    done
+}
+
+fzf=(fzf --ansi
+    --delimiter=$'\t'
+    --margin=0,$(( (`tput cols` - 25 - 3) / 2 ))
+    --no-info
+    --prompt="app:"
+    --reverse
+    --with-nth=1 --accept-nth=2
+)
+
+choice=$(scan_app | "${fzf[@]}")
+[[ "$choice" ]] && setsid $choice >/dev/null 2>&1 & sleep .2

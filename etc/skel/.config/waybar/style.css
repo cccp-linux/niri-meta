@@ -41,6 +41,9 @@ tooltip label {
     color: #bf616a; /* red11 */
 }
 
+#custom-battery {
+    margin-right: 16px;
+}
 #custom-battery.critical:not(.charging) {
     animation-name: blink;
     animation-duration: 0.4s;
@@ -58,8 +61,8 @@ tooltip label {
     color: #ebcb8b; /* yellow13 */
 }
 
-#custom-menu {
-    margin-right: 16px;
+#custom-launcher {
+    margin-left: 16px;
 }
 
 #custom-network {
@@ -114,7 +117,6 @@ tooltip label {
 }
 
 #workspaces {
-    margin-left: 8px;
 }
 #workspaces button {
     background-color: #5e81ac; /* frost10 */

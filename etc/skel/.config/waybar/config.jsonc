@@ -5,6 +5,7 @@
     "spacing": 16,
 
     "modules-left": [
+        "custom/launcher",
         "niri/workspaces",
         "cpu",
         "temperature",
@@ -24,7 +25,6 @@
         "wireplumber",
         "custom/usb",
         "custom/battery",
-        "custom/menu"
     ],
 
     ////////////////////
@@ -83,8 +83,9 @@
         "return-type": "json",
     },
 
-    "custom/menu": {
-        "format": " ",
+    "custom/launcher": {
+        "format": "󰣆 ",
+        "on-click": "x-terminal-emulator --class vpane:appmgr -e appmgr",
         "tooltip": false,
     },
 

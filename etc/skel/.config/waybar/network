@@ -6,7 +6,7 @@ offline=(󰤫 󰤠 󰤣 󰤦 󰤩)
 
 get_info()
 {
-    local signal=0 ssid state tooltip type
+    local key signal=0 ssid state tooltip type val
 
     while IFS=": " read -r key val; do
         case "$key" in

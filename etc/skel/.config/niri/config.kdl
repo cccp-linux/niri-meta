@@ -198,6 +198,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+B           { spawn "x-www-browser"; }
+    Mod+Shift+M     { spawn "x-terminal-emulator" "--class=pane:usbmgr" "-e" "usbmgr"; }
 
     Mod+O           { toggle-overview; }
     Mod+Shift+P     { power-off-monitors; }
@@ -207,6 +208,7 @@ binds {
     Mod+T           { spawn "x-terminal-emulator"; }
     Mod+Shift+T     { spawn "x-terminal-emulator" "--class=pane:term"; }
 
+    Mod+Shift+W     { spawn "x-terminal-emulator" "--class=vpane:wlanmgr" "-e" "wlanmgr"; }
     Mod+Shift+Y     { spawn "/usr/libexec/wlsunset-toggle"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }

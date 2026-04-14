@@ -1,0 +1,68 @@
+#!/bin/bash
+
+scan_bt()
+{
+    readonly blue=$(tput setaf 4)
+    readonly dim=$(tput dim)
+    readonly green=$(tput setaf 2)
+    readonly mag=$(tput setaf 5)
+    readonly norm=$(tput sgr0)
+    readonly yell=$(tput setaf 3)
+
+    local active ci cn icon key mac name op state val
+
+    while read -r _ mac name; do
+        active= ci="$yell" cn="$dim" icon="󰂯" op="pair" state=
+
+        while read -r key val; do
+            case "$key" in
+                Icon:) case "$val" in
+                    audio-headset)    icon="󰋎";;
+                    audio-headphones) icon="󰋋";;
+                    audio-card)       icon="󰓃";;
+                    input-keyboard)   icon="󰥻";;
+                    input-mouse)      icon="󰍽";;
+                    input-gaming)     icon="󰊖";;
+                    phone)            icon="󰄜";;
+                    computer)         icon="󰇄";;
+                esac ;;
+
+                Paired:) if [[ "$val" == "yes" ]]; then
+                    ci="$blue" cn= op="connect" state="󰌹"
+                fi ;;
+
+                Connected:) if [[ "$val" == "yes" ]]; then
+                    active="➤" ci="$green" cn= op="disconnect" state="󱘖"
+                fi ;;
+            esac
+        done < <(bluetoothctl info "$mac")
+
+        printf "${norm}%1s ${ci}%1s${norm}  ${cn}%-32s${norm} ${mag}%1s\t%s\t%s\n" \
+            "$active" "$icon" "$name" "$state" "$mac" "$op"
+    done < <(bluetoothctl devices | tac)
+}
+export -f scan_bt
+
+{ echo "scan on"; sleep infinity; } | bluetoothctl &>/dev/null &
+trap 'kill 0' EXIT
+
+while :; do
+    fzf=(fzf --ansi
+        --bind="ctrl-r:reload(bash -c scan_bt)"
+        --delimiter=$'\t'
+        --margin=0,$(( (`tput cols` - 39 - 3) / 2 ))
+        --no-info
+        --prompt="bt:"
+        --reverse
+        --with-nth=1 --accept-nth=2,3
+    )
+
+    choice=$(scan_bt | "${fzf[@]}")
+    [[ "$choice" ]] || break
+
+    mac=$(echo "$choice" | cut -d $'\t' -f1)
+     op=$(echo "$choice" | cut -d $'\t' -f2)
+
+    echo "--"
+    bluetoothctl "$op" "$mac" && sleep 2 || read -p "Press ENTER to continue... "
+done

@@ -40,6 +40,7 @@
         "format": " ",
         "format-connected": " {device_alias}",
         "format-connected-battery": " {device_alias} {device_battery_percentage:2}%",
+        "on-click": "x-terminal-emulator --class vpane:bluetoothctl -e btmgr",
         "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
@@ -82,11 +83,6 @@
         "return-type": "json",
     },
 
-    "custom/usb": {
-        "format": "󱊟 ",
-        "tooltip": false,
-    },
-
     "custom/menu": {
         "format": " ",
         "tooltip": false,
@@ -94,12 +90,20 @@
 
     "custom/network#eth0": {
         "exec": "~/.config/waybar/network eth0",
+        "on-click": "x-terminal-emulator --class vpane:lanmgr -e lanmgr eth0",
         "return-type": "json",
     },
 
     "custom/network#wlan0": {
         "exec": "~/.config/waybar/network wlan0",
+        "on-click": "x-terminal-emulator --class vpane:wlanmgr -e wlanmgr wlan0",
         "return-type": "json",
+    },
+
+    "custom/usb": {
+        "format": "󱊟 ",
+        "on-click": "x-terminal-emulator --class pane:usbmgr -e usbmgr",
+        "tooltip": false,
     },
 
     "idle_inhibitor": {

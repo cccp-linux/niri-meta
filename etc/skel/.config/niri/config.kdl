@@ -198,6 +198,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     Mod+Shift+B     { spawn "x-terminal-emulator" "--class=vpane:btmgr"  "-e" "btmgr" ; }
+    Mod+Shift+C     { spawn "x-terminal-emulator" "--class=pane:calc"    "-e" "qalc"  ; }
     Mod+D           { spawn "x-terminal-emulator" "--class=vpane:appmgr" "-e" "appmgr"; }
     Mod+Shift+M     { spawn "x-terminal-emulator" "--class=pane:usbmgr"  "-e" "usbmgr"; }
 

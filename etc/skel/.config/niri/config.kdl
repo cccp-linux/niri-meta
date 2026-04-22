@@ -197,8 +197,9 @@ binds {
     // miscellaneous
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
+    Mod+Shift+B     { spawn "x-terminal-emulator" "--class=vpane:btmgr"  "-e" "btmgr" ; }
     Mod+D           { spawn "x-terminal-emulator" "--class=vpane:appmgr" "-e" "appmgr"; }
-    Mod+Shift+M     { spawn "x-terminal-emulator" "--class=pane:usbmgr" "-e" "usbmgr"; }
+    Mod+Shift+M     { spawn "x-terminal-emulator" "--class=pane:usbmgr"  "-e" "usbmgr"; }
 
     Mod+O           { toggle-overview; }
     Mod+Shift+P     { power-off-monitors; }

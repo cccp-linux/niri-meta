@@ -1,3 +1,11 @@
+niri-meta (0.23) unstable; urgency=medium
+
+  * niri/config.kdl: add shortcut for qalc
+  * nir/config.kdl: add shortcut for btmgr
+  * Add mvi script
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 22 Apr 2026 17:14:44 -0400
+
 niri-meta (0.22) unstable; urgency=medium
 
   * waybar/style.css: bigger font

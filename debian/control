@@ -17,6 +17,7 @@ Depends:
  brightness-udev,
  brightnessctl,
  curl,
+ desktop-file-utils,
  ffmpeg,
  fonts-courier-nerd,
  fonts-roboto,

@@ -1,3 +1,10 @@
+niri-meta (0.24) unstable; urgency=medium
+
+  * d/control: depend on desktop-file-utils
+  * d/control: stronger deps
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 23 Apr 2026 14:47:43 -0400
+
 niri-meta (0.23) unstable; urgency=medium
 
   * niri/config.kdl: add shortcut for qalc

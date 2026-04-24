@@ -1,3 +1,9 @@
+niri-meta (0.25) unstable; urgency=medium
+
+  * mvi.desktop => _mvi.desktop
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 23 Apr 2026 21:41:13 -0400
+
 niri-meta (0.24) unstable; urgency=medium
 
   * d/control: depend on desktop-file-utils

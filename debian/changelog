@@ -1,3 +1,11 @@
+niri-meta (0.26) unstable; urgency=medium
+
+  * d/control: depend on swayidle and gtklock
+  * niri/config.kdl: firefox fix
+  * niri/config.kdl: gui tweaks
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 28 Apr 2026 16:20:12 -0400
+
 niri-meta (0.25) unstable; urgency=medium
 
   * mvi.desktop => _mvi.desktop

@@ -29,9 +29,9 @@ layout {
 
     border {
         width 2
-        active-gradient from="#80c8ff80" to="#c7ff7f80" angle=45
-        inactive-color "#50505080"
-        urgent-color "#cb000080"
+        active-gradient from="88c0d080" to="b48ead80" angle=45
+        inactive-color "#4c566a80"
+        urgent-color "#bf616a"
     }
     focus-ring { off; }
 }
@@ -43,7 +43,7 @@ prefer-no-csd
 screenshot-path "~/image/screenshot_%Y-%m-%d_%H-%M-%S.png"
 
 window-rule {
-    geometry-corner-radius 6
+    geometry-corner-radius 8
     clip-to-geometry true
 }
 

@@ -86,6 +86,7 @@ window-rule {
 gestures { hot-corners { off; }; }
 
 // spawn-at-startup "swaybg" "-m" "fill" "-i" "<path>"
+spawn-at-startup "swayidle" "-w"
 spawn-at-startup "waybar"
 
 binds {
@@ -205,6 +206,7 @@ binds {
     Mod+Shift+B     { spawn "x-terminal-emulator" "--class=vpane:btmgr"  "-e" "btmgr" ; }
     Mod+Shift+C     { spawn "x-terminal-emulator" "--class=pane:calc"    "-e" "qalc"  ; }
     Mod+D           { spawn "x-terminal-emulator" "--class=vpane:appmgr" "-e" "appmgr"; }
+    Mod+Shift+L     { spawn "gtklock" "-d"; }
     Mod+Shift+M     { spawn "x-terminal-emulator" "--class=pane:usbmgr"  "-e" "usbmgr"; }
 
     Mod+O           { toggle-overview; }

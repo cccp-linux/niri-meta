@@ -47,6 +47,7 @@ Depends:
  yaru-theme-gtk,
  yaru-theme-icon,
 Recommends:
+ graphicsmagick,
  qt5-gtk-platformtheme,
  qt6-gtk-platformtheme,
  qt6-wayland,

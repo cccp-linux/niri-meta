@@ -26,6 +26,7 @@ Depends:
  gtklock,
  jq,
  libgtk-3-0,
+ libgtk-4-1,
  mpv,
  network-manager,
  network-manager-tui,

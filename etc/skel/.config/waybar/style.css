@@ -120,13 +120,13 @@ tooltip label {
 }
 #workspaces button {
     background-color: #5e81ac; /* frost10 */
-    border-radius: 50%;
+    border-radius: 30px;
     border: none;
     color: #2e3440; /* polar0 */
     margin: 10px 3px;
     min-height: 0;
     min-width: 0;
-    padding: 0px 5px;
+    padding: 0px 4px;
     transition: all 0.2s ease;
 }
 #workspaces button.active {

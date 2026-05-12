@@ -212,7 +212,7 @@ binds {
     Mod+O           { toggle-overview; }
     Mod+Shift+P     { power-off-monitors; }
     Mod+Q           { close-window; }
-    Mod+Shift+Q     { quit skip-confirmation=true; }
+    Mod+Shift+Q     { spawn "x-terminal-emulator" "--class=vpane:powermgr" "-e" "powermgr"; }
 
     Mod+T           { spawn "x-terminal-emulator"; }
     Mod+Shift+T     { spawn "x-terminal-emulator" "--class=pane:term"; }

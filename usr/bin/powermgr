@@ -1,0 +1,33 @@
+#!/bin/bash
+
+readonly -a action=(
+    "󰌾:135:Lock screen:loginctl lock-session"
+    "󰍃: 33:Log out    :session quit"
+    "󰤄: 40:Suspend    :systemctl suspend"
+    ":214:Reboot     :systemctl reboot"
+    ":196:Power off  :systemctl poweroff"
+)
+readonly norm=$(tput sgr0)
+
+scan_app()
+{
+    local args c icon name row
+
+    for row in "${action[@]}"; do
+        IFS=: read -r icon c name args <<< "$row"
+        c=$(tput setaf $c)
+        printf "${c}%1s  ${norm}%-22s\t%s\n" "$icon" "$name" "$args"
+    done
+}
+
+fzf=(fzf --ansi
+    --delimiter=$'\t'
+    --margin=0,$(( (`tput cols` - 25 - 3) / 2 ))
+    --no-info
+    --prompt="action:"
+    --reverse
+    --with-nth=1 --accept-nth=2
+)
+
+choice=$(scan_app | "${fzf[@]}")
+[[ "$choice" ]] && $choice >/dev/null 2>&1

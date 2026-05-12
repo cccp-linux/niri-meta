@@ -1,3 +1,13 @@
+niri-meta (0.32) unstable; urgency=medium
+
+  * niri/config.kdl: use powermgr script
+  * Add powermgr script
+  * Add session script
+  * swayidle/config: react to lock message
+  * settings.ini have lower priority
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 12 May 2026 18:35:19 -0400
+
 niri-meta (0.31) unstable; urgency=medium
 
   * d/control: messes up wifi glyphs

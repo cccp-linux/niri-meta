@@ -45,21 +45,9 @@
     },
 
     "clock": {
-        "actions": {
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down",
-        },
-        "calendar": {
-            "format": {
-                "months":   "<span color='#e5e9f0'><b>{}</b></span>",
-                "weekdays": "<span color='#5e81ac'><b>{}</b></span>",
-                "today":    "<span color='#bf616a'><b>{}</b></span>",
-            },
-            "on-scroll": 1,
-        },
-        "format": "{:%a %b %d, %H:%M}",
+        "format": "󰨲  {:%a %b %d, %H:%M}",
         "interval": 10,
-        "tooltip-format": "<span font-family='Roboto Mono'>{calendar}</span>",
+        "tooltip": false,
     },
 
     "cpu": {

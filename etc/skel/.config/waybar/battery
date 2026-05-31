@@ -1,7 +1,8 @@
 #!/bin/bash
 
 cap=
-icon=(    )
+icon=(󱃍 󰂎 󰁺 󰁻 󰁼 󰁽 󰁾 󰁿 󰂀 󰂁 󰂂 󰁹)
+charge=(󰢟 󰢟 󰢜 󰂆 󰂇 󰂈 󰢝 󰂉 󰢞 󰂊 󰂋 󰂅)
 path=/sys/class/power_supply/${1:-BAT0}
 stat=
 
@@ -14,14 +15,13 @@ get_info()
 
         [[ "$stat" ]] || return
 
-        local id=$((cap * (${#icon[@]} - 1) / 100))
-        local ic="${icon[$id]}"
+        local ic id=$((cap * (${#icon[@]} - 1) / 100))
 
         local class
         case "$stat" in
-            Charging) class="charging" ic="󱐋$ic";;
-            Full) class="full" ic=" $ic";;
-            *) class="discharging";;
+            Charging) class="charging" ic="${charge[$id]}";;
+            Full) class="full" ic="";;
+            *) class="discharging" ic="${icon[$id]}";;
         esac
 
         local state

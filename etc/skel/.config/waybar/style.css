@@ -52,7 +52,7 @@ tooltip label {
     animation-direction: alternate;
 }
 #custom-battery.critical, #custom-battery.low {
-    color: #bf616a; /* red11 */
+    color: red;
 }
 #custom-battery.full {
     color: #a3be8c; /* green14 */

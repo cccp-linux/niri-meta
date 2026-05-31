@@ -115,7 +115,7 @@
     },
 
     "niri/language": {
-        "format": "  {}",
+        "format": "   {}",
     },
 
     "power-profiles-daemon": {

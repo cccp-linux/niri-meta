@@ -215,6 +215,7 @@ binds {
     Mod+Shift+Q     { spawn "x-terminal-emulator" "--class=vpane:powermgr" "-e" "powermgr"; }
 
     Mod+T           { spawn "x-terminal-emulator"; }
+    Mod+Alt+T       { spawn "x-terminal-emulator" "-e" "tmux"; }
     Mod+Shift+T     { spawn "x-terminal-emulator" "--class=pane:term"; }
 
     Mod+Shift+W     { spawn "x-terminal-emulator" "--class=vpane:wlanmgr" "-e" "wlanmgr"; }

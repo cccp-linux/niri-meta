@@ -20,6 +20,7 @@ scan_app()
     done
 }
 
+sleep .1
 fzf=(fzf --ansi
     --delimiter=$'\t'
     --margin=0,$(( (`tput cols` - 25 - 3) / 2 ))

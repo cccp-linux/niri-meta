@@ -51,6 +51,7 @@ scan_media()
 }
 export -f scan_media
 
+sleep .1
 while :; do
     fzf=(fzf --ansi
         --bind="ctrl-r:reload(bash -c scan_media)"

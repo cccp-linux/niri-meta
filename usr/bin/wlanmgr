@@ -50,6 +50,7 @@ scan_wifi()
 export dev=${1:-wlan0}
 export -f scan_wifi
 
+sleep .1
 while :; do
     fzf=(fzf --ansi
         --bind="ctrl-r:reload(bash -c scan_wifi)"

@@ -19,6 +19,7 @@ scan_net()
 export dev=${1:-eth0}
 export -f scan_net
 
+sleep .1
 while :; do
     fzf=(fzf --ansi
         --bind="ctrl-r:reload(bash -c scan_net)"

@@ -46,6 +46,7 @@ export -f scan_bt
 { echo "scan on"; sleep infinity; } | bluetoothctl &>/dev/null &
 trap 'kill 0' EXIT
 
+sleep .1
 while :; do
     fzf=(fzf --ansi
         --bind="ctrl-r:reload(bash -c scan_bt)"

@@ -1,3 +1,9 @@
+niri-meta (0.35) unstable; urgency=medium
+
+  * Replace patched fonts
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Thu, 04 Jun 2026 17:43:29 -0400
+
 niri-meta (0.34) unstable; urgency=medium
 
   * Add start-up delay to mgr scripts

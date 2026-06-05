@@ -37,7 +37,7 @@ Depends:
  procps,
  swaybg,
  swayidle,
- term-meta,
+ term-meta (>= 0.26),
  udisks2,
  waybar,
  wireplumber,

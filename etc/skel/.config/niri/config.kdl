@@ -50,15 +50,8 @@ window-rule {
 window-rule {
     match app-id="^pane:"
     open-floating true
-    default-column-width { proportion 0.70; }
-    default-window-height { proportion 0.70; }
-}
-
-window-rule {
-    match app-id="^vpane:"
-    open-floating true
-    default-column-width { proportion 0.33; }
-    default-window-height { proportion 0.70; }
+    default-column-width { }
+    default-window-height { }
 }
 
 window-rule {
@@ -203,22 +196,22 @@ binds {
     // miscellaneous
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
-    Mod+Shift+B     { spawn "x-terminal-emulator" "--class=vpane:btmgr"  "-e" "btmgr" ; }
-    Mod+Shift+C     { spawn "x-terminal-emulator" "--class=pane:calc"    "-e" "qalc"  ; }
-    Mod+D           { spawn "x-terminal-emulator" "--class=vpane:appmgr" "-e" "appmgr"; }
+    Mod+Shift+B     { spawn "x-terminal-emulator" "--app-id=pane:btmgr"  "-e" "btmgr" ; }
+    Mod+Shift+C     { spawn "x-terminal-emulator" "--app-id=pane:calc"   "-e" "qalc"  ; }
+    Mod+D           { spawn "x-terminal-emulator" "--app-id=pane:appmgr" "-W" "32x16" "-e" "appmgr"; }
     Mod+Shift+L     { spawn "gtklock" "-d"; }
-    Mod+Shift+M     { spawn "x-terminal-emulator" "--class=pane:usbmgr"  "-e" "usbmgr"; }
+    Mod+Shift+M     { spawn "x-terminal-emulator" "--app-id=pane:usbmgr" "-W" "96x24" "-e" "usbmgr"; }
 
     Mod+O           { toggle-overview; }
     Mod+Shift+P     { power-off-monitors; }
     Mod+Q           { close-window; }
-    Mod+Shift+Q     { spawn "x-terminal-emulator" "--class=vpane:powermgr" "-e" "powermgr"; }
+    Mod+Shift+Q     { spawn "x-terminal-emulator" "--app-id=pane:powermgr" "-W" "32x8" "-e" "powermgr"; }
 
     Mod+T           { spawn "x-terminal-emulator"; }
     Mod+Alt+T       { spawn "x-terminal-emulator" "-e" "tmux"; }
-    Mod+Shift+T     { spawn "x-terminal-emulator" "--class=pane:term"; }
+    Mod+Shift+T     { spawn "x-terminal-emulator" "--app-id=pane:term" "-W" "80x25"; }
 
-    Mod+Shift+W     { spawn "x-terminal-emulator" "--class=vpane:wlanmgr" "-e" "wlanmgr"; }
+    Mod+Shift+W     { spawn "x-terminal-emulator" "--app-id=pane:wlanmgr" "-e" "wlanmgr"; }
     Mod+Shift+Y     { spawn "/usr/libexec/wlsunset-toggle"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+" "-l" "1.0"; }

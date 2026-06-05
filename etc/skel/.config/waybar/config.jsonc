@@ -38,7 +38,7 @@
         "format": " ",
         "format-connected": " {device_alias}",
         "format-connected-battery": " {device_alias} {device_battery_percentage:2}%",
-        "on-click": "x-terminal-emulator --class vpane:bluetoothctl -e btmgr",
+        "on-click": "x-terminal-emulator --app-id=pane:btmgr -e btmgr",
         "tooltip-format-connected": "{num_connections} connected\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}",
         "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_battery_percentage}%"
@@ -55,7 +55,7 @@
         "interval": 3,
         "justify": "left",
         "min-length": 5,
-        "on-click": "x-terminal-emulator --class xpane:htop -e htop",
+        "on-click": "x-terminal-emulator --app-id=xpane:htop -e htop",
         "states": {
             "high": 90,
             "max": 100,
@@ -71,25 +71,25 @@
 
     "custom/launcher": {
         "format": "󰣆 ",
-        "on-click": "x-terminal-emulator --class vpane:appmgr -e appmgr",
+        "on-click": "x-terminal-emulator --app-id=pane:appmgr -W 32x16 -e appmgr",
         "tooltip": false,
     },
 
     "custom/network#eth0": {
         "exec": "~/.config/waybar/network eth0",
-        "on-click": "x-terminal-emulator --class vpane:lanmgr -e lanmgr eth0",
+        "on-click": "x-terminal-emulator --app-id=pane:lanmgr -e lanmgr eth0",
         "return-type": "json",
     },
 
     "custom/network#wlan0": {
         "exec": "~/.config/waybar/network wlan0",
-        "on-click": "x-terminal-emulator --class vpane:wlanmgr -e wlanmgr wlan0",
+        "on-click": "x-terminal-emulator --app-id=pane:wlanmgr -e wlanmgr wlan0",
         "return-type": "json",
     },
 
     "custom/usb": {
         "format": "󱊟 ",
-        "on-click": "x-terminal-emulator --class pane:usbmgr -e usbmgr",
+        "on-click": "x-terminal-emulator --app-id=pane:usbmgr -W 96x24 -e usbmgr",
         "tooltip": false,
     },
 
@@ -106,7 +106,7 @@
         "interval": 5,
         "justify": "left",
         "min-length": 6,
-        "on-click": "x-terminal-emulator --class xpane:btop -e btop",
+        "on-click": "x-terminal-emulator --app-id=xpane:btop -e btop",
         "states": {
             "high": 90,
             "max": 100,

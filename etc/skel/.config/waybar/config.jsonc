@@ -48,6 +48,7 @@
         "format": "󰨲  {:%a %b %d, %H:%M}",
         "interval": 10,
         "tooltip": false,
+        "on-click": "x-terminal-emulator --app-id=pane:ipycal -o pad=8x4 -W 74x28 -e ipycal",
     },
 
     "cpu": {

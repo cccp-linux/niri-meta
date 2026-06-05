@@ -35,6 +35,7 @@ Depends:
  playerctl,
  power-profiles-daemon,
  procps,
+ pycal,
  swaybg,
  swayidle,
  term-meta (>= 0.26),

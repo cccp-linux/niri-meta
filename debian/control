@@ -53,7 +53,6 @@ Recommends:
  fonts-linuxlibertine,
  fonts-lmodern,
  fonts-open-sans,
- graphicsmagick,
  libgtk-3-0,
  libgtk-4-1,
  qt5-gtk-platformtheme,

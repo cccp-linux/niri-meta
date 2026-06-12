@@ -59,7 +59,9 @@ Recommends:
  qt6-gtk-platformtheme,
  qt6-wayland,
  qtwayland5,
+ quickjs,
  xwayland-satellite,
  yaru-theme-gtk,
  yaru-theme-icon,
+ yt-dlp,
 Description: Shell meta-package

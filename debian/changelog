@@ -1,3 +1,9 @@
+niri-meta (0.38) unstable; urgency=medium
+
+  * d/control: recommend yt-dlp
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 12 Jun 2026 11:15:09 -0400
+
 niri-meta (0.37) unstable; urgency=medium
 
   * Revert "d/control: recommend graphicsmagick"

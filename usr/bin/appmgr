@@ -1,24 +1,16 @@
 #!/bin/bash
 
-readonly -a app=(
-    ":202:Firefox Web Browser:firefox"
-    ":244:LibreOffice:libreoffice"
-    ": 71:LibreOffice Calc:libreoffice --calc"
-    ":172:LibreOffice Draw:libreoffice --draw"
-    ": 25:LibreOffice Writer:libreoffice --writer"
-    ":  8:Terminal Emulator:x-terminal-emulator"
-)
+readonly conf="${XDG_CONFIG_HOME:-${HOME}/.config}/appmgr.conf"
 readonly norm=$(tput sgr0)
 
 scan_app()
 {
     local args c icon name row
 
-    for row in "${app[@]}"; do
-        IFS=: read -r icon c name args <<< "$row"
+    while IFS='|' read -r icon c name args; do
         c=$(tput setaf $c)
         printf "${c}%1s  ${norm}%-22s\t%s\n" "$icon" "$name" "$args"
-    done
+    done < "$conf"
 }
 
 sleep .1

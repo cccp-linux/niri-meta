@@ -36,7 +36,7 @@ Depends:
  power-profiles-daemon,
  procps,
  pycal,
- sessionctl (>= 0.3),
+ sessionctl (>= 0.5),
  swaybg,
  swayidle,
  term-meta (>= 0.26),

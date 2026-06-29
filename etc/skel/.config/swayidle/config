@@ -1,6 +1,6 @@
 before-sleep "gtklock -d"
 lock "gtklock -d"
 
-timeout 600  "niri msg action power-off-monitors"
-timeout 605  "gtklock -d"
-timeout 1200 "systemctl suspend"
+timeout 600  "sessionctl monitors off"
+timeout 605  "sessionctl lock"
+timeout 1200 "sessionctl sleep --on-battery"

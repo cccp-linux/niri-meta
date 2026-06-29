@@ -1,11 +1,11 @@
 #!/bin/bash
 
 readonly -a action=(
-    "󰌾:135:Lock screen:loginctl lock-session"
-    "󰍃: 33:Log out    :session quit"
-    "󰤄: 40:Suspend    :systemctl suspend"
-    ":214:Reboot     :systemctl reboot"
-    ":196:Power off  :systemctl poweroff"
+    "󰌾:135:Lock screen:sessionctl lock"
+    "󰍃: 33:Log out    :sessionctl logout --yes"
+    "󰤄: 40:Sleep      :sessionctl sleep"
+    ":214:Reboot     :sessionctl reboot"
+    ":196:Power off  :sessionctl poweroff"
 )
 readonly norm=$(tput sgr0)
 

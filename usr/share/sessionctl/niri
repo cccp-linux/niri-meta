@@ -1,0 +1,19 @@
+#!/bin/bash
+
+logout()
+{
+    case "$1" in
+        -y|--yes) niri msg action quit --skip-confirmation;;
+        *) niri msg action quit;;
+    esac
+}
+help[logout]="Log out of the current session: logout [-y|--yes]"
+
+monitors()
+{
+    case "$1" in
+        on) niri msg action power-on-monitors;;
+        off) niri msg action power-off-monitors;;
+    esac
+}
+help[monitors]="Toggle monitor power: monitors <on|off>"

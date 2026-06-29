@@ -1,3 +1,12 @@
+niri-meta (0.40) unstable; urgency=medium
+
+  * gtklock: use sessionctl
+  * swayidle: use sessionctl
+  * powermgr: use sessionctl
+  * d/control: depend on sessionctl
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Mon, 29 Jun 2026 12:43:05 -0400
+
 niri-meta (0.39) unstable; urgency=medium
 
   * appmgr: configurable user menu

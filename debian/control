@@ -25,7 +25,6 @@ Depends:
  fonts-symbols-nerd,
  gtklock,
  jq,
- libfile-mimeinfo-perl,
  mpv,
  network-manager,
  network-manager-tui,
@@ -45,7 +44,6 @@ Depends:
  wireplumber,
  wlsunset,
  wpasupplicant,
- xdg-utils,
 Recommends:
  fonts-font-awesome,
  fonts-freefont-otf,

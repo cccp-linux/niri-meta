@@ -1,3 +1,9 @@
+niri-meta (0.42) unstable; urgency=medium
+
+  * d/control: not using xdg-open
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 15 Jul 2026 23:21:35 -0400
+
 niri-meta (0.41) unstable; urgency=medium
 
   * Update for sessionctl 0.5

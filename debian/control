@@ -63,4 +63,5 @@ Recommends:
  yaru-theme-gtk,
  yaru-theme-icon,
  yt-dlp,
+ zathura,
 Description: Shell meta-package

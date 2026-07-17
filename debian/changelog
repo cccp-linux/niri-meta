@@ -1,3 +1,10 @@
+niri-meta (0.43) unstable; urgency=medium
+
+  * d/control: depend on zathura
+  * _mvi => mvi
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Fri, 17 Jul 2026 19:26:14 -0400
+
 niri-meta (0.42) unstable; urgency=medium
 
   * d/control: not using xdg-open

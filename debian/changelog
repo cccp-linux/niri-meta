@@ -1,3 +1,10 @@
+niri-meta (0.45) unstable; urgency=medium
+
+  * Remove mvi script
+  * d/control: depend on swayimg
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Mon, 27 Jul 2026 18:30:07 -0400
+
 niri-meta (0.44) unstable; urgency=medium
 
   * wlanmgr: fix security type detection

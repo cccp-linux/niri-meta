@@ -38,6 +38,7 @@ Depends:
  sessionctl (>= 0.5),
  swaybg,
  swayidle,
+ swayimg,
  term-meta (>= 0.26),
  udisks2,
  waybar,

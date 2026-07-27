@@ -1,3 +1,9 @@
+niri-meta (0.44) unstable; urgency=medium
+
+  * wlanmgr: fix security type detection
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Mon, 27 Jul 2026 17:11:16 -0400
+
 niri-meta (0.43) unstable; urgency=medium
 
   * d/control: depend on zathura

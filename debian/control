@@ -60,6 +60,7 @@ Recommends:
  qt6-wayland,
  qtwayland5,
  quickjs,
+ rtkit,
  xwayland-satellite,
  yaru-theme-gtk,
  yaru-theme-icon,

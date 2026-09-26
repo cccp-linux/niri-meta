@@ -142,7 +142,7 @@
 
     "wireplumber": {
         "format": " {volume}",
-        "format-muted": "{volume}",
+        "format-muted": " {volume}",
         "justify": "left",
         "min-length": 6,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",

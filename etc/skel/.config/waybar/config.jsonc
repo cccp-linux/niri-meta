@@ -9,10 +9,10 @@
         "niri/workspaces",
         "cpu",
         "temperature",
-        "memory",
+        "memory"
     ],
     "modules-center": [
-        "clock",
+        "clock"
     ],
     "modules-right": [
         "idle_inhibitor",
@@ -24,14 +24,14 @@
         "backlight",
         "wireplumber",
         "custom/usb",
-        "custom/battery",
+        "custom/battery"
     ],
 
     ////////////////////
     "backlight": {
         "format": " {}",
         "on-update": "",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "bluetooth": {
@@ -48,7 +48,7 @@
         "format": "󰨲  {:%a %b %d, %H:%M}",
         "interval": 10,
         "tooltip": false,
-        "on-click": "x-terminal-emulator --app-id=pane:ipycal -o pad=8x4 -W 74x28 -e ipycal",
+        "on-click": "x-terminal-emulator --app-id=pane:ipycal -o pad=8x4 -W 74x28 -e ipycal"
     },
 
     "cpu": {
@@ -59,39 +59,39 @@
         "on-click": "x-terminal-emulator --app-id=xpane:htop -e htop",
         "states": {
             "high": 90,
-            "max": 100,
+            "max": 100
         },
-        "tooltip": false,
+        "tooltip": false
     },
 
     "custom/battery": {
         "exec": "~/.config/waybar/battery BAT0",
         "format": "{} {percentage}",
-        "return-type": "json",
+        "return-type": "json"
     },
 
     "custom/launcher": {
         "format": "󰣆 ",
         "on-click": "x-terminal-emulator --app-id=pane:appmgr -W 32x16 -e appmgr",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "custom/network#eth0": {
         "exec": "~/.config/waybar/network eth0",
         "on-click": "x-terminal-emulator --app-id=pane:lanmgr -e lanmgr eth0",
-        "return-type": "json",
+        "return-type": "json"
     },
 
     "custom/network#wlan0": {
         "exec": "~/.config/waybar/network wlan0",
         "on-click": "x-terminal-emulator --app-id=pane:wlanmgr -e wlanmgr wlan0",
-        "return-type": "json",
+        "return-type": "json"
     },
 
     "custom/usb": {
         "format": "󱊟 ",
         "on-click": "x-terminal-emulator --app-id=pane:usbmgr -W 96x24 -e usbmgr",
-        "tooltip": false,
+        "tooltip": false
     },
 
     "idle_inhibitor": {
@@ -110,13 +110,13 @@
         "on-click": "x-terminal-emulator --app-id=xpane:btop -e btop",
         "states": {
             "high": 90,
-            "max": 100,
+            "max": 100
         },
-        "tooltip": false,
+        "tooltip": false
     },
 
     "niri/language": {
-        "format": "   {}",
+        "format": "   {}"
     },
 
     "power-profiles-daemon": {
@@ -137,7 +137,7 @@
         "min-length": 6,
         "thermal-zone": 8,
         "tooltip": false,
-        "warning-threshold": 90,
+        "warning-threshold": 90
     },
 
     "wireplumber": {
@@ -147,6 +147,6 @@
         "min-length": 6,
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-update": "",
-        "tooltip": false,
-    },
+        "tooltip": false
+    }
 }

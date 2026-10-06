@@ -1,6 +1,17 @@
 # Niri Meta-package
 
-_TODO_
+Copy the following into your home dir:
+
+```shell
+/etc/skel/.config/
+/etc/skel/.profile.d/
+```
+
+Add the following to your `.config/niri/config.kdl`:
+
+```ini
+include "/etc/niri/config.kdl"
+```
 
 ## Authors
 

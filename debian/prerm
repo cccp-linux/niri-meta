@@ -1,0 +1,22 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    remove)
+        rm -f /etc/xdg/waybar/config.jsonc /etc/xdg/waybar/style.css
+
+        dpkg-divert --package niri-meta --remove --rename /etc/xdg/waybar/config.jsonc
+        dpkg-divert --package niri-meta --remove --rename /etc/xdg/waybar/style.css
+
+        rmdir /etc/xdg/waybar 2>/dev/null || true
+    ;;
+
+    upgrade|deconfigure|failed-upgrade) ;;
+
+    *)  echo "prerm called with unknown argument '$1'" >&2 ; exit 1 ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+

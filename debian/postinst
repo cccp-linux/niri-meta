@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    configure)
+        mkdir -p /etc/xdg/waybar
+
+        dpkg-divert --package niri-meta --add --rename \
+            --divert /etc/xdg/waybar/config.jsonc.example /etc/xdg/waybar/config.jsonc
+        dpkg-divert --package niri-meta --add --rename \
+            --divert /etc/xdg/waybar/style.css.example /etc/xdg/waybar/style.css
+
+        cp /usr/share/niri-meta/config.jsonc /etc/xdg/waybar/config.jsonc
+        cp /usr/share/niri-meta/style.css /etc/xdg/waybar/style.css
+        ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure|triggered) ;;
+
+    *) echo "postinst called with unknown argument '$1'" >&2 ; exit 1 ;;
+esac
+
+#DEBHELPER#
+
+exit 0
+

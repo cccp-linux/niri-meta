@@ -65,3 +65,9 @@ Recommends:
  yaru-theme-icon,
  yt-dlp,
 Description: Shell meta-package
+ Copy the following into your home dir:
+ * /etc/skel/.config/
+ * /etc/skel/.profile.d/
+ .
+ Add the following to your .config/niri/config.kdl:
+ * include "/etc/niri/config.kdl"

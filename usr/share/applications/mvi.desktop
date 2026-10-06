@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=mvi Image Viewer
+Exec=mvi %U
+Icon=image-viewer
+Terminal=false
+MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/webp;image/jxl;image/svg+xml;image/vnd.adobe.photoshop;image/x-bmp;image/x-png;image/x-pcx;image/x-tga;image/x-xbitmap;image/x-xpixmap;image/x-portable-anymap;image/x-portable-binarymap;image/x-portable-graymap;image/x-portable-pixmap;
+Categories=Graphics;2DGraphics;Viewer;

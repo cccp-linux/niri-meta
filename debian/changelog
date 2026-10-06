@@ -1,3 +1,19 @@
+niri-meta (0.48) unstable; urgency=medium
+
+  * Add install blurb
+  * Add background
+  * niri: install system-wide
+  * yt-dlp: install system-wide
+  * waybar: install system-wide
+  * Revert "d/control: depend on zathura"
+  * Revert "d/control: depend on swayimg"
+  * Revert "Remove mvi script"
+  * swayidle: install system-wide
+  * Add background
+  * gtklock: install system-wide
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Tue, 06 Oct 2026 12:33:03 -0400
+
 niri-meta (0.47) unstable; urgency=medium
 
   * waybar: tweak

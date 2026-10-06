@@ -65,7 +65,7 @@
     },
 
     "custom/battery": {
-        "exec": "~/.config/waybar/battery BAT0",
+        "exec": "/usr/share/niri-meta/battery BAT0",
         "format": "{} {percentage}",
         "return-type": "json"
     },
@@ -77,13 +77,13 @@
     },
 
     "custom/network#eth0": {
-        "exec": "~/.config/waybar/network eth0",
+        "exec": "/usr/share/niri-meta/network eth0",
         "on-click": "x-terminal-emulator --app-id=pane:lanmgr -e lanmgr eth0",
         "return-type": "json"
     },
 
     "custom/network#wlan0": {
-        "exec": "~/.config/waybar/network wlan0",
+        "exec": "/usr/share/niri-meta/network wlan0",
         "on-click": "x-terminal-emulator --app-id=pane:wlanmgr -e wlanmgr wlan0",
         "return-type": "json"
     },

@@ -1,3 +1,12 @@
+niri-meta (0.52) unstable; urgency=medium
+
+  * mvi: support for user config
+  * mvi: move scripts into /usr/share
+  * mvi: add autoload script
+  * mvi: revamp
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Wed, 07 Oct 2026 12:17:16 -0400
+
 niri-meta (0.51) unstable; urgency=medium
 
   * waybar: fix script paths

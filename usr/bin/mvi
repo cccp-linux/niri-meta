@@ -1,2 +1,2 @@
 #!/bin/sh
-exec mpv --config-dir=/etc/mvi "$@"
+exec mpv --config-dir=/usr/share/mvi "$@"

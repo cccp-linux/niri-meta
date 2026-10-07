@@ -28,6 +28,7 @@ layout {
     default-column-width { proportion 0.66667; }
 
     border {
+        on
         width 2
         active-gradient from="88c0d080" to="b48ead80" angle=45
         inactive-color "#4c566a80"

@@ -1,8 +1,9 @@
 [Desktop Entry]
+Version=1.0
 Type=Application
 Name=mvi Image Viewer
 Exec=mvi %U
-Icon=image-viewer
+Icon=image-x-generic
 Terminal=false
-MimeType=image/bmp;image/gif;image/jpeg;image/jpg;image/pjpeg;image/png;image/tiff;image/webp;image/jxl;image/svg+xml;image/vnd.adobe.photoshop;image/x-bmp;image/x-png;image/x-pcx;image/x-tga;image/x-xbitmap;image/x-xpixmap;image/x-portable-anymap;image/x-portable-binarymap;image/x-portable-graymap;image/x-portable-pixmap;
 Categories=Graphics;2DGraphics;Viewer;
+MimeType=image/apng;image/avif;image/bmp;image/gif;image/heic;image/heic-sequence;image/heif;image/heif-sequence;image/jp2;image/jpeg;image/jpx;image/jxl;image/png;image/svg+xml;image/tiff;image/vnd.adobe.photoshop;image/vnd.microsoft.icon;image/webp;image/x-bmp;image/x-dds;image/x-exr;image/x-icon;image/x-jp2-codestream;image/x-ms-bmp;image/x-pcx;image/x-portable-anymap;image/x-portable-bitmap;image/x-portable-graymap;image/x-portable-pixmap;image/x-psd;image/x-tga;image/x-xbitmap;image/x-xpixmap;

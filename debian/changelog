@@ -1,3 +1,10 @@
+niri-meta (0.54) unstable; urgency=medium
+
+  * mvi is becoming a separate package
+  * d/control: fix arch
+
+ -- Dimitry Ishenko <dimitry.ishenko@gmail.com>  Sun, 08 Nov 2026 21:42:15 -0500
+
 niri-meta (0.53) unstable; urgency=medium
 
   * niri: explicit border on

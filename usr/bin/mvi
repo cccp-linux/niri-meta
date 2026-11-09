@@ -1,3 +1,0 @@
-#!/bin/sh
-[ -d "$HOME/.config/mvi" ] && dir="$HOME/.config/mvi" || dir="/usr/share/mvi"
-exec mpv --config-dir="$dir" "$@"

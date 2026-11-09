@@ -54,6 +54,7 @@ Recommends:
  fonts-open-sans,
  libgtk-3-0,
  libgtk-4-1,
+ mvi,
  qt5-gtk-platformtheme,
  qt6-gtk-platformtheme,
  qt6-wayland,
